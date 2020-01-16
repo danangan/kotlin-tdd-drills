@@ -8,12 +8,12 @@ import java.util.Calendar.SUNDAY
 import java.util.Calendar.DAY_OF_WEEK
 
 
- class StringCalcWithTime {
+open class StringCalcWithTime {
 
     //refactor this function so that there is no dependency on real time
     // use Extract & Override
      fun add(numbers: String): Int? {
-         val isWeekend = when (Calendar.getInstance().get(DAY_OF_WEEK)){
+         val isWeekend = when (getDayOfWeek()){
              SATURDAY, SUNDAY   -> true
              else               -> false
          }
@@ -25,4 +25,5 @@ import java.util.Calendar.DAY_OF_WEEK
 
      }
 
+     open fun getDayOfWeek() = Calendar.getInstance().get(DAY_OF_WEEK)
  }

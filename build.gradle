@@ -25,7 +25,6 @@ dependencies {
     //
     testImplementation "io.kotlintest:kotlintest-assertions:3.4.1",
             "io.kotlintest:kotlintest-runner-junit5:3.4.1"
-
 }
 
 compileKotlin {
